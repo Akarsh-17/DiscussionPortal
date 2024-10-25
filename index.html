@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- container -->
+    <div>
+        <!-- header -->
+        <div class="header">Discussion Portal</div>
+        <div>
+            <button type="button" onclick="presentSubmitTab()">new Question</button>
+            <input type="text" id="search"  placeholder="search for discussion"/>
+        </div>
+        
+        <!-- main -->
+        <div class="main">
+            <!-- left -->
+            <div class="left" id="left"></div>
+            <!-- right -->
+            <div class="right" id="right">
+                <h2>Welcome to discussion  portal</h2>
+                <p>Enter a subject and a Question</p>
+                
+                <form class="formQues">
+                    <input type="text" id="subject" placeholder="Subject" value="" required>
+                    <textarea id="question" placeholder="Question" rows="5" cols="60" required value=""></textarea>
+                    <input type="button" value="submit"  id="submit" onclick="submitFunction()"/>
+                </form>
+            </div>
+
+            <div class="reviewTab"  id="reviewTab">
+                <h2>Question</h2>
+                <!-- data -->
+                <div id="showQuestion">
+
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <button type="button" id="removeBtn" onclick="handleRemove()">Remove</button>
+                </div>
+                <h3>Response</h3>
+                <div class="response" id="response">
+
+                </div>
+                <div style="margin-top: 10px; ">
+                    <p>Add Response</p>
+                    <form class="formQues">
+                        <input type="text" id="name" placeholder="User name" value="" required>
+                        <textarea id="review" placeholder="User review" rows="5" cols="60" required value=""></textarea>
+                        <input type="button" value="Submit Review"  id="submitReview" onclick="subrev()"/>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
